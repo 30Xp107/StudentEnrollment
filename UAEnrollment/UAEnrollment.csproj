@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5FFB1DD-7A1D-4E46-8525-9A307356A3AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UAEnrollment</RootNamespace>
+    <AssemblyName>UAEnrollment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.32.1\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=6.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.6.6.1\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additional_Violation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional_Violation.Designer.cs">
+      <DependentUpon>Additional_Violation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApiUI\SmsMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApiUI\SmsMessage.Designer.cs">
+      <DependentUpon>SmsMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Api\ClickatellWrapperClient.cs" />
+    <Compile Include="Api\Credentials.cs" />
+    <Compile Include="Api\IClient.cs" />
+    <Compile Include="Api\IResponse.cs" />
+    <Compile Include="Api\TwilioWrapperClient.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="ControlPrinter.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loginv2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginv2.Designer.cs">
+      <DependentUpon>Loginv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AddAccount.Designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AddFeeForm.Designer.cs">
+      <DependentUpon>AddFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AddSubjects.Designer.cs">
+      <DependentUpon>AddSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddViolationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AddViolationForm.Designer.cs">
+      <DependentUpon>AddViolationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboardv2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Dashboardv2.Designer.cs">
+      <DependentUpon>Dashboardv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditEnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EditEnrollmentForm.Designer.cs">
+      <DependentUpon>EditEnrollmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditEnrollmentFormPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EditEnrollmentFormPortal.Designer.cs">
+      <DependentUpon>EditEnrollmentFormPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EnrollmentForm.Designer.cs">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfileAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ProfileAccount.Designer.cs">
+      <DependentUpon>ProfileAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StudentFeeForm.Designer.cs">
+      <DependentUpon>StudentFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StudentGradeForm.Designer.cs">
+      <DependentUpon>StudentGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StudentPortal.Designer.cs">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentPortalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StudentPortalAdmin.Designer.cs">
+      <DependentUpon>StudentPortalAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentViolationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StudentViolationForm.Designer.cs">
+      <DependentUpon>StudentViolationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\PrintEnroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrintEnroll.Designer.cs">
+      <DependentUpon>PrintEnroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrintEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrintEnrollment.Designer.cs">
+      <DependentUpon>PrintEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrintGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrintGrade.Designer.cs">
+      <DependentUpon>PrintGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrintPermanent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrintPermanent.Designer.cs">
+      <DependentUpon>PrintPermanent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Account.Designer.cs">
+      <DependentUpon>Student_Account.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Additional_Violation.resx">
+      <DependentUpon>Additional_Violation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApiUI\SmsMessage.resx">
+      <DependentUpon>SmsMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginv2.resx">
+      <DependentUpon>Loginv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddFeeForm.resx">
+      <DependentUpon>AddFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddSubjects.resx">
+      <DependentUpon>AddSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddViolationForm.resx">
+      <DependentUpon>AddViolationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Dashboardv2.resx">
+      <DependentUpon>Dashboardv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EditEnrollmentForm.resx">
+      <DependentUpon>EditEnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EditEnrollmentFormPortal.resx">
+      <DependentUpon>EditEnrollmentFormPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProfileAccount.resx">
+      <DependentUpon>ProfileAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentFeeForm.resx">
+      <DependentUpon>StudentFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentGradeForm.resx">
+      <DependentUpon>StudentGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentPortal.resx">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentPortalAdmin.resx">
+      <DependentUpon>StudentPortalAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentViolationForm.resx">
+      <DependentUpon>StudentViolationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\PrintEnroll.resx">
+      <DependentUpon>PrintEnroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintEnrollment.resx">
+      <DependentUpon>PrintEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintGrade.resx">
+      <DependentUpon>PrintGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintPermanent.resx">
+      <DependentUpon>PrintPermanent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Account.resx">
+      <DependentUpon>Student_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7623195_arrow_left_logout_ui_logout icon_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\342069806_610349417779968_74893764557642815_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5539639_arrow_back_direction_left_navigation_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4476867_refresh_reload_ui_arrow_interface_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2124114_add_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5084638_delete_minus_remove_trash_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1041650_garbage_rubbish_trash_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106230_add_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5084638_delete_minus_remove_trash_icon%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643729_bin_delete_garbage_rubbish_trash_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5084641_add_create_new_plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2931177_output_print_printer_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\EmptyLicensesLicx.3.0.0\build\EmptyLicensesLicx.targets" Condition="Exists('..\packages\EmptyLicensesLicx.3.0.0\build\EmptyLicensesLicx.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EmptyLicensesLicx.3.0.0\build\EmptyLicensesLicx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmptyLicensesLicx.3.0.0\build\EmptyLicensesLicx.targets'))" />
+  </Target>
+</Project>
